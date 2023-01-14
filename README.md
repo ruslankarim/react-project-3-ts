@@ -1,2 +1,2 @@
-# react-project-3-ts
+# react-project3
 Created with CodeSandbox
