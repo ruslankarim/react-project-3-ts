@@ -1,6 +1,8 @@
-import React from "react";
+import React, { PropsWithChildren, useState } from "react";
+import Item from "./Item";
 
-const Shop = () => {
+const Shop: React.FC = () => {
+
   const items = [
     {
       name: "Респиратор 3M",
@@ -13,7 +15,14 @@ const Shop = () => {
       image: "https://images.unsplash.com/photo-1599412227383-b7d4751c8765"
     }
   ];
-  return <div className="shop"></div>;
+
+  return (
+    <div className="shop">
+      {items.map(({name, desc, image}) => {
+        return <Item name={name} desc={desc} imageUrl={image}/>
+      })}
+    </div>
+  );
 };
 
 export default Shop;
